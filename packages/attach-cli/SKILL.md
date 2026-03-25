@@ -324,6 +324,10 @@ node-name {
     // Array of numbers
     interrupts = <0 42 4>;
 
+    // Interrupt with parent specified (required for proper validation)
+    interrupt-parent = <&gpio>;
+    interrupts = <25 2>;
+
     // Reference to another node
     clocks = <&clk_spi>;
 
@@ -349,6 +353,7 @@ node-name {
 | `Failed to find binding` | Compatible string not found | Use `list-devices` to find valid strings |
 | `missing_required` error | Required property not set | Add the property from schema |
 | `number_limit` error | Value outside valid range | Check schema for min/max bounds |
+| `interrupts` size error | Wrong number of cells in interrupts array | Add `interrupt-parent = <&gpio>;` property to specify the interrupt controller. The number of cells required depends on the interrupt controller's `#interrupt-cells` property. |
 
 ---
 
@@ -360,3 +365,4 @@ node-name {
 4. **Pattern properties = channels** - If present, help user configure each channel
 5. **Phandle references** - Properties referencing other nodes need `<&label>` syntax
 6. **Macros need includes** - If schema shows macros, the overlay may need `#include` directives
+7. **Interrupts need interrupt-parent** - When using the `interrupts` property, always specify `interrupt-parent = <&controller>;` (e.g., `<&gpio>`, `<&intc>`). The interrupt controller determines how many cells are needed in the `interrupts` array.
