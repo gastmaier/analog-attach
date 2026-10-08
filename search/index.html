@@ -3,26 +3,23 @@
 <html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta content="This section covers the Tree Config (advanced) editor. Content will be expanded step by step." name="description" />
-
-    <title>Overview &#8212; Analog Attach  documentation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search &#8212; Analog Attach  documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8e8a900e" />
     <link rel="stylesheet" type="text/css" href="../_static/app.min.css?v=b1d7a81a" />
+    
     <script async="async" src="../_static/app.umd.js?v=daa30c51"></script>
     <link rel="icon" href="../_static/icon.svg"/>
     <link rel="index" title="Index" href="../genindex/" />
-    <link rel="search" title="Search" href="../search/" />
-    <link rel="next" title="Topics" href="../common/" />
-    <link rel="prev" title="Overview" href="../plug-and-play/" />
+    <link rel="search" title="Search" href="#" />
+    <meta name="robots" content="noindex" />
+    
    
   
   
   
   <meta name="repository" content="analog-attach">
   <meta name="version" content="">
-  
-    <meta name="page_source_suffix" content=".rst">
   
   
   
@@ -43,6 +40,7 @@
     }
   }
 </style>
+
   </head>
   
     <body>
@@ -94,18 +92,7 @@
           <a id="scroll-up" href="#top-anchor" title="Back to top"></a>
         </div>
         <nav>
-          <ul>
-<li><a class="reference internal" href="#">Overview</a></li>
-<li><a class="reference internal" href="#using-the-tree">Using the Tree</a></li>
-<li><a class="reference internal" href="#search">Search</a></li>
-<li><a class="reference internal" href="#configuration">Configuration</a></li>
-<li><a class="reference internal" href="#hidden-features">Hidden Features</a><ul>
-<li><a class="reference internal" href="#go-to-node">Go To Node</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#topics">Topics</a></li>
-</ul>
-
+          
         </nav>
       </div>
     </div>
@@ -165,13 +152,13 @@ Content on this topic
   <span class="caption-text">Tree Config View</span>
 </p>
 
-<ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#using-the-tree">Using the Tree</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#search">Search</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#configuration">Configuration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#hidden-features">Hidden Features</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#topics">Topics</a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tree-config/">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tree-config/#using-the-tree">Using the Tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tree-config/#search">Search</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tree-config/#configuration">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tree-config/#hidden-features">Hidden Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tree-config/#topics">Topics</a></li>
 </ul>
 
 <p class="caption" role="heading">
@@ -208,68 +195,12 @@ Content on this topic
 </div>
           <div class="body" role="main">
             
-  <section id="overview">
-<h1>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h1>
-<p>This section covers the Tree Config (advanced) editor. Content will be
-expanded step by step.</p>
-<p>The Tree Config view is the default editor for <code class="docutils literal notranslate"><span class="pre">.dts</span></code> files. It displays the
-full device tree structure for the opened file.</p>
-<p>When opening a <code class="docutils literal notranslate"><span class="pre">.dtso</span></code> file in the Tree Config view, you should merge a base
-<code class="docutils literal notranslate"><span class="pre">.dts</span></code> file first. After merging, the full tree is shown, but only your
-changes are written back to the <code class="docutils literal notranslate"><span class="pre">.dtso</span></code> file.</p>
-</section>
-<section id="using-the-tree">
-<h1>Using the Tree<a class="headerlink" href="#using-the-tree" title="Link to this heading"></a></h1>
-<p>Click a node in the tree to view its configuration in the main panel.
-Use the <strong>+</strong> button to add a new node. Newly added nodes can be enabled,
-or deleted with the trash icon.</p>
-<p>When you press <strong>+</strong>, a list of possible devices is shown, with an option to
-add a custom node. A custom node is not interpreted and no validation is
-performed for it; only custom properties can be added.</p>
-<img alt="Add node dialog with device list and custom node option." class="align-center" src="https://raw.githubusercontent.com/analogdevicesinc/analog-attach/doc_resources/resources/tc-select-node-to-add.png" />
-</section>
-<section id="search">
-<h1>Search<a class="headerlink" href="#search" title="Link to this heading"></a></h1>
-<p>The search bar matches against the full node path. Selecting a result focuses
-the node in the tree.</p>
-<img alt="Tree search results." class="align-center" src="https://raw.githubusercontent.com/analogdevicesinc/analog-attach/doc_resources/resources/tc-search-node.png" />
-</section>
-<section id="configuration">
-<h1>Configuration<a class="headerlink" href="#configuration" title="Link to this heading"></a></h1>
-<p>The configuration panel supports device aliases with built-in validation.
-Custom properties can be added and removed from the configuration list.</p>
-<img alt="Configuration panel with alias and custom properties." class="align-center" src="https://raw.githubusercontent.com/analogdevicesinc/analog-attach/doc_resources/resources/tc-search-node.png" />
-</section>
-<section id="hidden-features">
-<h1>Hidden Features<a class="headerlink" href="#hidden-features" title="Link to this heading"></a></h1>
-<section id="go-to-node">
-<h2>Go To Node<a class="headerlink" href="#go-to-node" title="Link to this heading"></a></h2>
-<p>Some properties reference other nodes in the device tree (for example, phandle
-references). When a property has such a reference, the configuration panel shows
-a dropdown listing the available target nodes. A button on the right side of the
-dropdown lets you navigate directly to the referenced node — clicking it selects
-that node in the tree and opens its configuration.</p>
-<p>This feature is only available in the Tree Config view.</p>
-<img alt="Hyperlink dropdown with the go-to button on the right." class="align-center" src="https://raw.githubusercontent.com/analogdevicesinc/analog-attach/doc_resources/resources/tc-goto-node.png" />
-</section>
-</section>
-<section id="topics">
-<h1>Topics<a class="headerlink" href="#topics" title="Link to this heading"></a></h1>
-<ul class="simple">
-<li><p>Overview (what the view is for)</p></li>
-<li><p>Tree navigation</p></li>
-<li><p>Editing nodes and properties</p></li>
-<li><p>Custom properties</p></li>
-<li><p>Validation feedback</p></li>
-</ul>
-</section>
-
 
           </div>
               <div class="related">
                 &nbsp;
-    <a href="../plug-and-play/" title="Previous document (Alt+Shift+LeftArrow)" class="prev">Overview</a>
-    <a href="../common/" title="Next document (Alt+Shift+RightArrow)" class="next">Topics</a>
+    <div></div>
+    <div></div>
               </div>
           
         </div>
